@@ -26,8 +26,8 @@ https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/thevileo/Tra
 - Updated the getnerva.org hyperlink. Shilling to the max. 
 
 <h2><b><u>FAQ</b></u></h2>
-Q: What is the Save buttons used for? <br>
-A: They will save your sell/buy prices and parameters in the event you close out of the application. I found it annoying to re-enter this info. 
-<p>
+Q: What is the Save buttons used for?<br>
+A: They will save your sell/buy prices and parameters in the event you close out of the application. I found it annoying to re-enter this info.
+
 Q: What is the SELL/BUY/STRONG BUY used for? <br>
-A: This is for daily trading. It will be an indicator if the current price is greater or less then the inital price. I used this as a reference to find dips I might be interested in that day. 
+A: This is for daily trading. It will be an indicator if the current price is greater or less then the inital price. I used this as a reference to find dips I might be interested in that day.
