@@ -432,7 +432,7 @@
             // volumeTextBox
             // 
             this.volumeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.volumeTextBox.Location = new System.Drawing.Point(74, 261);
+            this.volumeTextBox.Location = new System.Drawing.Point(74, 266);
             this.volumeTextBox.Name = "volumeTextBox";
             this.volumeTextBox.ReadOnly = true;
             this.volumeTextBox.Size = new System.Drawing.Size(100, 13);
@@ -441,7 +441,7 @@
             // intialPriceTextBox
             // 
             this.intialPriceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.intialPriceTextBox.Location = new System.Drawing.Point(74, 301);
+            this.intialPriceTextBox.Location = new System.Drawing.Point(74, 285);
             this.intialPriceTextBox.Name = "intialPriceTextBox";
             this.intialPriceTextBox.ReadOnly = true;
             this.intialPriceTextBox.Size = new System.Drawing.Size(100, 13);
@@ -450,7 +450,7 @@
             // currentPriceTextBox
             // 
             this.currentPriceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.currentPriceTextBox.Location = new System.Drawing.Point(74, 281);
+            this.currentPriceTextBox.Location = new System.Drawing.Point(74, 307);
             this.currentPriceTextBox.Name = "currentPriceTextBox";
             this.currentPriceTextBox.ReadOnly = true;
             this.currentPriceTextBox.Size = new System.Drawing.Size(100, 13);
