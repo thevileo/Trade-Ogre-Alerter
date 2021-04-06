@@ -31,3 +31,6 @@ A: They will save your sell/buy prices and parameters in the event you close out
 
 Q: What is the SELL/BUY/STRONG BUY used for? <br>
 A: This is for daily trading. It will be an indicator if the current price is greater or less then the inital price. I used this as a reference to find dips I might be interested in that day.
+
+Q: Can I monitor Multiple Crytpos? <br>
+A: Yes you can! Just open up another instance of TOA(Trade Ogre Alerts) and set your criteria. The Save buttons are the only thing you have to be mindful of if you utilize this functionality.<p>
