@@ -68,6 +68,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -195,7 +196,7 @@
             // desktopAlertsCheckBox
             // 
             this.desktopAlertsCheckBox.AutoSize = true;
-            this.desktopAlertsCheckBox.Location = new System.Drawing.Point(90, 86);
+            this.desktopAlertsCheckBox.Location = new System.Drawing.Point(90, 82);
             this.desktopAlertsCheckBox.Name = "desktopAlertsCheckBox";
             this.desktopAlertsCheckBox.Size = new System.Drawing.Size(96, 17);
             this.desktopAlertsCheckBox.TabIndex = 18;
@@ -205,7 +206,7 @@
             // autoAlertsCheckBox
             // 
             this.autoAlertsCheckBox.AutoSize = true;
-            this.autoAlertsCheckBox.Location = new System.Drawing.Point(90, 63);
+            this.autoAlertsCheckBox.Location = new System.Drawing.Point(90, 61);
             this.autoAlertsCheckBox.Name = "autoAlertsCheckBox";
             this.autoAlertsCheckBox.Size = new System.Drawing.Size(83, 17);
             this.autoAlertsCheckBox.TabIndex = 19;
@@ -478,11 +479,23 @@
             this.panel2.Size = new System.Drawing.Size(396, 57);
             this.panel2.TabIndex = 0;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(90, 102);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(96, 17);
+            this.checkBox1.TabIndex = 65;
+            this.checkBox1.Text = "Always on Top";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(396, 319);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.suggestionLabelOutput);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.linkLabel2);
@@ -563,6 +576,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 

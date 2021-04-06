@@ -237,9 +237,10 @@ namespace TradeOgreBot
             try
             {
                 // Send an SMS message.
+                PhoneNums nums = new PhoneNums();
                 var message = MessageResource.Create(
-                    to: new PhoneNumber("+12153174085"),
-                    from: new PhoneNumber("+14158552279"),
+                    to: new PhoneNumber(nums.yourNum),
+                    from: new PhoneNumber(nums.twilioNum),
                     body: "Time to Sell " + cryptoBox1.Text + " ! Current Bid is  " + greaterLessEqualComboBox.Text + " " + valueStoredTextBox.Text);
                smsAlertsCheckBox.Checked = false;
                   Console.WriteLine("Success!");
@@ -267,9 +268,10 @@ namespace TradeOgreBot
             try
             {
                 // Send an SMS message.
+                PhoneNums nums = new PhoneNums();
                 var message = MessageResource.Create(
-                    to: new PhoneNumber("+12153174085"),
-                    from: new PhoneNumber("+14158552279"),
+                    to: new PhoneNumber(nums.yourNum),
+                    from: new PhoneNumber(nums.twilioNum),
                     body: "Time to BUY " + cryptoBox1.Text + " ! Current Bid is  " + greaterLessEqualComboBox.Text + " " + valueStoredTextBox.Text);
                 smsAlertsCheckBox.Checked = false;
                 Console.WriteLine("Success!");
@@ -484,6 +486,18 @@ namespace TradeOgreBot
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://www.getnerva.org");
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                this.TopMost = true;
+            }
+            else
+            {
+                this.TopMost = false;
+            }
         }
     }
 }

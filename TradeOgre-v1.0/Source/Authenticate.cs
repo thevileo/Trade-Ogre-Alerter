@@ -32,6 +32,12 @@ namespace Authenticate
         public string secretKey = File.ReadAllText("secretKey.txt").ToString();
 
     }
+    class PhoneNums
+    {
+        public string twilioNum = File.ReadAllText("twilioNum.txt").ToString();
+        public string yourNum = File.ReadAllText("yourNum.txt").ToString();
+
+    }
     class RestClient
     {
         public string endPoint { get; set; }

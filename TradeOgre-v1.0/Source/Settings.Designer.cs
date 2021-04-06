@@ -33,6 +33,11 @@
             this.tradeOgreApiLabel = new System.Windows.Forms.Label();
             this.saveButton = new System.Windows.Forms.Button();
             this.tradeOgreApiTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.twilioNumTextBox = new System.Windows.Forms.TextBox();
+            this.yourNumTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // secretLabel
@@ -63,9 +68,9 @@
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(96, 96);
+            this.saveButton.Location = new System.Drawing.Point(214, 96);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(45, 23);
+            this.saveButton.Size = new System.Drawing.Size(71, 23);
             this.saveButton.TabIndex = 47;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = true;
@@ -79,11 +84,58 @@
             this.tradeOgreApiTextBox.Size = new System.Drawing.Size(129, 20);
             this.tradeOgreApiTextBox.TabIndex = 46;
             // 
+            // twilioNumTextBox
+            // 
+            this.twilioNumTextBox.Location = new System.Drawing.Point(156, 28);
+            this.twilioNumTextBox.Name = "twilioNumTextBox";
+            this.twilioNumTextBox.Size = new System.Drawing.Size(129, 20);
+            this.twilioNumTextBox.TabIndex = 51;
+            // 
+            // yourNumTextBox
+            // 
+            this.yourNumTextBox.Location = new System.Drawing.Point(154, 70);
+            this.yourNumTextBox.Name = "yourNumTextBox";
+            this.yourNumTextBox.Size = new System.Drawing.Size(132, 20);
+            this.yourNumTextBox.TabIndex = 52;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(154, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 13);
+            this.label1.TabIndex = 53;
+            this.label1.Text = "TWILIO PHONE #";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(154, 51);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.TabIndex = 54;
+            this.label2.Text = "Your #";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label3.Location = new System.Drawing.Point(92, 122);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(193, 13);
+            this.label3.TabIndex = 55;
+            this.label3.Text = "Phone format example : +12153334444";
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(160, 135);
+            this.ClientSize = new System.Drawing.Size(297, 142);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.yourNumTextBox);
+            this.Controls.Add(this.twilioNumTextBox);
             this.Controls.Add(this.secretLabel);
             this.Controls.Add(this.secretTextBox);
             this.Controls.Add(this.tradeOgreApiLabel);
@@ -105,5 +157,10 @@
         private System.Windows.Forms.Label tradeOgreApiLabel;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.MaskedTextBox tradeOgreApiTextBox;
+        private System.Windows.Forms.TextBox twilioNumTextBox;
+        private System.Windows.Forms.TextBox yourNumTextBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
