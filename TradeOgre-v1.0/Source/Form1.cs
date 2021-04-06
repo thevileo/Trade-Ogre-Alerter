@@ -125,23 +125,23 @@ namespace TradeOgreBot
 
                             string initialprice = Convert.ToString(p.Value.First);
                             initialprice = Regex.Replace(initialprice, @"[A-Za-z"""":]+", "");
-                            intialPriceLabelOutput.Text = initialprice;
+                            intialPriceTextBox.Text = initialprice;
 
                             string price = Convert.ToString(p.Value.First.Next);
                             price = Regex.Replace(price, @"[A-Za-z"""":]+", "");
-                            currentPriceLabelOutput.Text = price;
+                            currentPriceTextBox.Text = price;
 
                             string volume = Convert.ToString(p.Value.First.Next.Next.Next.Next);
                             volume = Regex.Replace(volume, @"[A-Za-z"""":]+", "");
-                            volumeOutputLabel.Text = volume;
+                            volumeTextBox.Text = volume;
 
                             string ask = Convert.ToString(p.Value.First.Next.Next.Next.Next.Next.Next);
                             ask = Regex.Replace(ask, @"[A-Za-z"""":]+", "");
-                            currentAskLabelOutput.Text = ask;
+                            currentAskTextBox.Text = ask;
 
                             string bid = Convert.ToString(p.Value.First.Next.Next.Next.Next.Next);
                             bid = Regex.Replace(bid, @"[A-Za-z"""":]+", "");
-                            currentBidLabelOutput.Text = bid;
+                            currentBidTextBox.Text = bid;
 
 
                         }
@@ -153,7 +153,7 @@ namespace TradeOgreBot
                 //Subtract listing price from current price and highlight based off reulsts 
                 decimal initialPrice;
                 decimal currentPrice;
-                if (Decimal.TryParse(intialPriceLabelOutput.Text, out initialPrice) && Decimal.TryParse(currentPriceLabelOutput.Text, out currentPrice))
+                if (Decimal.TryParse(intialPriceTextBox.Text, out initialPrice) && Decimal.TryParse(currentPriceTextBox.Text, out currentPrice))
                 {
 
                     if (currentPrice > initialPrice)
@@ -296,7 +296,7 @@ namespace TradeOgreBot
             decimal bidPrice;
             if (sellAlertcheckBox.Checked == true && greaterLessEqualComboBox.Text == ">=")
             {
-                if (Decimal.TryParse(currentBidLabelOutput.Text, out bidPrice) && Decimal.TryParse(valueStoredTextBox.Text, out setPrice))
+                if (Decimal.TryParse(currentBidTextBox.Text, out bidPrice) && Decimal.TryParse(valueStoredTextBox.Text, out setPrice))
                 {
 
                     if (bidPrice >= setPrice)
@@ -308,7 +308,7 @@ namespace TradeOgreBot
 
             if (sellAlertcheckBox.Checked == true && greaterLessEqualComboBox.Text == "<=")
             {
-                if (Decimal.TryParse(currentBidLabelOutput.Text, out bidPrice) && Decimal.TryParse(valueStoredTextBox.Text, out setPrice))
+                if (Decimal.TryParse(currentBidTextBox.Text, out bidPrice) && Decimal.TryParse(valueStoredTextBox.Text, out setPrice))
                 {
 
                     if (bidPrice <= setPrice)
@@ -325,7 +325,7 @@ namespace TradeOgreBot
             decimal askPrice;
             if (buyAlertCheckBox.Checked == true && greaterLessEqualComboBox2.Text == ">=")
             {
-                if (Decimal.TryParse(currentAskLabelOutput.Text, out askPrice) && Decimal.TryParse(valueStoredTextBox2.Text, out setPrice2))
+                if (Decimal.TryParse(currentAskTextBox.Text, out askPrice) && Decimal.TryParse(valueStoredTextBox2.Text, out setPrice2))
                 {
 
                     if (askPrice >= setPrice2)
@@ -337,7 +337,7 @@ namespace TradeOgreBot
 
             if (buyAlertCheckBox.Checked == true && greaterLessEqualComboBox2.Text == "<=")
             {
-                if (Decimal.TryParse(currentAskLabelOutput.Text, out askPrice) && Decimal.TryParse(valueStoredTextBox2.Text, out setPrice2))
+                if (Decimal.TryParse(currentAskTextBox.Text, out askPrice) && Decimal.TryParse(valueStoredTextBox2.Text, out setPrice2))
                 {
 
                     if (askPrice <= setPrice2)
@@ -490,14 +490,7 @@ namespace TradeOgreBot
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked == true)
-            {
-                this.TopMost = true;
-            }
-            else
-            {
-                this.TopMost = false;
-            }
+
         }
     }
 }

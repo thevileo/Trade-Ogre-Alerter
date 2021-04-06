@@ -33,11 +33,8 @@
             this.startButton = new System.Windows.Forms.Button();
             this.cryptoBox1 = new System.Windows.Forms.ComboBox();
             this.volumeLabel = new System.Windows.Forms.Label();
-            this.volumeOutputLabel = new System.Windows.Forms.Label();
             this.intialPriceLabel = new System.Windows.Forms.Label();
             this.currentPriceLabel = new System.Windows.Forms.Label();
-            this.intialPriceLabelOutput = new System.Windows.Forms.Label();
-            this.currentPriceLabelOutput = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.delayComboBox = new System.Windows.Forms.ComboBox();
             this.suggestionLabelOutput = new System.Windows.Forms.Label();
@@ -56,7 +53,6 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
-            this.currentBidLabelOutput = new System.Windows.Forms.Label();
             this.currentBidLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.valueStoredTextBox2 = new System.Windows.Forms.TextBox();
@@ -64,11 +60,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.sellAlertcheckBox = new System.Windows.Forms.CheckBox();
             this.buyAlertCheckBox = new System.Windows.Forms.CheckBox();
-            this.currentAskLabelOutput = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.volumeTextBox = new System.Windows.Forms.TextBox();
+            this.intialPriceTextBox = new System.Windows.Forms.TextBox();
+            this.currentPriceTextBox = new System.Windows.Forms.TextBox();
+            this.currentBidTextBox = new System.Windows.Forms.TextBox();
+            this.currentAskTextBox = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -103,18 +103,6 @@
             this.volumeLabel.TabIndex = 3;
             this.volumeLabel.Text = "Volume:";
             // 
-            // volumeOutputLabel
-            // 
-            this.volumeOutputLabel.AutoSize = true;
-            this.volumeOutputLabel.BackColor = System.Drawing.SystemColors.Control;
-            this.volumeOutputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.volumeOutputLabel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.volumeOutputLabel.Location = new System.Drawing.Point(78, 263);
-            this.volumeOutputLabel.Name = "volumeOutputLabel";
-            this.volumeOutputLabel.Size = new System.Drawing.Size(44, 18);
-            this.volumeOutputLabel.TabIndex = 4;
-            this.volumeOutputLabel.Text = "0.000";
-            // 
             // intialPriceLabel
             // 
             this.intialPriceLabel.AutoSize = true;
@@ -134,30 +122,6 @@
             this.currentPriceLabel.Size = new System.Drawing.Size(68, 13);
             this.currentPriceLabel.TabIndex = 6;
             this.currentPriceLabel.Text = "Current Price";
-            // 
-            // intialPriceLabelOutput
-            // 
-            this.intialPriceLabelOutput.AutoSize = true;
-            this.intialPriceLabelOutput.BackColor = System.Drawing.SystemColors.Control;
-            this.intialPriceLabelOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.intialPriceLabelOutput.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.intialPriceLabelOutput.Location = new System.Drawing.Point(78, 282);
-            this.intialPriceLabelOutput.Name = "intialPriceLabelOutput";
-            this.intialPriceLabelOutput.Size = new System.Drawing.Size(44, 18);
-            this.intialPriceLabelOutput.TabIndex = 7;
-            this.intialPriceLabelOutput.Text = "0.000";
-            // 
-            // currentPriceLabelOutput
-            // 
-            this.currentPriceLabelOutput.AutoSize = true;
-            this.currentPriceLabelOutput.BackColor = System.Drawing.SystemColors.Control;
-            this.currentPriceLabelOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.currentPriceLabelOutput.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.currentPriceLabelOutput.Location = new System.Drawing.Point(78, 301);
-            this.currentPriceLabelOutput.Name = "currentPriceLabelOutput";
-            this.currentPriceLabelOutput.Size = new System.Drawing.Size(44, 18);
-            this.currentPriceLabelOutput.TabIndex = 8;
-            this.currentPriceLabelOutput.Text = "0.000";
             // 
             // timer1
             // 
@@ -336,18 +300,6 @@
             this.label1.TabIndex = 53;
             this.label1.Text = "You wont regret >";
             // 
-            // currentBidLabelOutput
-            // 
-            this.currentBidLabelOutput.AutoSize = true;
-            this.currentBidLabelOutput.BackColor = System.Drawing.Color.Red;
-            this.currentBidLabelOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.currentBidLabelOutput.ForeColor = System.Drawing.Color.White;
-            this.currentBidLabelOutput.Location = new System.Drawing.Point(271, 40);
-            this.currentBidLabelOutput.Name = "currentBidLabelOutput";
-            this.currentBidLabelOutput.Size = new System.Drawing.Size(44, 18);
-            this.currentBidLabelOutput.TabIndex = 55;
-            this.currentBidLabelOutput.Text = "0.000";
-            // 
             // currentBidLabel
             // 
             this.currentBidLabel.AutoSize = true;
@@ -426,18 +378,6 @@
             this.buyAlertCheckBox.UseVisualStyleBackColor = false;
             this.buyAlertCheckBox.CheckedChanged += new System.EventHandler(this.buyAlertCheckBox_CheckedChanged);
             // 
-            // currentAskLabelOutput
-            // 
-            this.currentAskLabelOutput.AutoSize = true;
-            this.currentAskLabelOutput.BackColor = System.Drawing.Color.Green;
-            this.currentAskLabelOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.currentAskLabelOutput.ForeColor = System.Drawing.Color.White;
-            this.currentAskLabelOutput.Location = new System.Drawing.Point(271, 38);
-            this.currentAskLabelOutput.Name = "currentAskLabelOutput";
-            this.currentAskLabelOutput.Size = new System.Drawing.Size(44, 18);
-            this.currentAskLabelOutput.TabIndex = 63;
-            this.currentAskLabelOutput.Text = "0.000";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -453,7 +393,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Red;
             this.panel1.Controls.Add(this.sellAlertcheckBox);
-            this.panel1.Controls.Add(this.currentBidLabelOutput);
+            this.panel1.Controls.Add(this.currentBidTextBox);
             this.panel1.Controls.Add(this.alertCriteriaLabel);
             this.panel1.Controls.Add(this.currentBidLabel);
             this.panel1.Controls.Add(this.greaterLessEqualComboBox);
@@ -467,13 +407,13 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Green;
+            this.panel2.Controls.Add(this.currentAskTextBox);
             this.panel2.Controls.Add(this.buyAlertCheckBox);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.greaterLessEqualComboBox2);
             this.panel2.Controls.Add(this.valueStoredTextBox2);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.currentAskLabelOutput);
             this.panel2.Location = new System.Drawing.Point(0, 204);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(396, 57);
@@ -488,13 +428,64 @@
             this.checkBox1.TabIndex = 65;
             this.checkBox1.Text = "Always on Top";
             this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // volumeTextBox
+            // 
+            this.volumeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.volumeTextBox.Location = new System.Drawing.Point(74, 261);
+            this.volumeTextBox.Name = "volumeTextBox";
+            this.volumeTextBox.ReadOnly = true;
+            this.volumeTextBox.Size = new System.Drawing.Size(100, 13);
+            this.volumeTextBox.TabIndex = 66;
+            // 
+            // intialPriceTextBox
+            // 
+            this.intialPriceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.intialPriceTextBox.Location = new System.Drawing.Point(74, 301);
+            this.intialPriceTextBox.Name = "intialPriceTextBox";
+            this.intialPriceTextBox.ReadOnly = true;
+            this.intialPriceTextBox.Size = new System.Drawing.Size(100, 13);
+            this.intialPriceTextBox.TabIndex = 67;
+            // 
+            // currentPriceTextBox
+            // 
+            this.currentPriceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.currentPriceTextBox.Location = new System.Drawing.Point(74, 281);
+            this.currentPriceTextBox.Name = "currentPriceTextBox";
+            this.currentPriceTextBox.ReadOnly = true;
+            this.currentPriceTextBox.Size = new System.Drawing.Size(100, 13);
+            this.currentPriceTextBox.TabIndex = 68;
+            // 
+            // currentBidTextBox
+            // 
+            this.currentBidTextBox.BackColor = System.Drawing.Color.Red;
+            this.currentBidTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.currentBidTextBox.ForeColor = System.Drawing.Color.White;
+            this.currentBidTextBox.Location = new System.Drawing.Point(274, 42);
+            this.currentBidTextBox.Name = "currentBidTextBox";
+            this.currentBidTextBox.ReadOnly = true;
+            this.currentBidTextBox.Size = new System.Drawing.Size(100, 13);
+            this.currentBidTextBox.TabIndex = 69;
+            // 
+            // currentAskTextBox
+            // 
+            this.currentAskTextBox.BackColor = System.Drawing.Color.Green;
+            this.currentAskTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.currentAskTextBox.ForeColor = System.Drawing.Color.White;
+            this.currentAskTextBox.Location = new System.Drawing.Point(277, 40);
+            this.currentAskTextBox.Name = "currentAskTextBox";
+            this.currentAskTextBox.ReadOnly = true;
+            this.currentAskTextBox.Size = new System.Drawing.Size(100, 13);
+            this.currentAskTextBox.TabIndex = 70;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(396, 319);
+            this.Controls.Add(this.currentPriceTextBox);
+            this.Controls.Add(this.intialPriceTextBox);
+            this.Controls.Add(this.volumeTextBox);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.suggestionLabelOutput);
             this.Controls.Add(this.label1);
@@ -506,11 +497,8 @@
             this.Controls.Add(this.autoAlertsCheckBox);
             this.Controls.Add(this.desktopAlertsCheckBox);
             this.Controls.Add(this.delayComboBox);
-            this.Controls.Add(this.currentPriceLabelOutput);
-            this.Controls.Add(this.intialPriceLabelOutput);
             this.Controls.Add(this.currentPriceLabel);
             this.Controls.Add(this.intialPriceLabel);
-            this.Controls.Add(this.volumeOutputLabel);
             this.Controls.Add(this.volumeLabel);
             this.Controls.Add(this.cryptoBox1);
             this.Controls.Add(this.startButton);
@@ -541,11 +529,8 @@
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.ComboBox cryptoBox1;
         private System.Windows.Forms.Label volumeLabel;
-        private System.Windows.Forms.Label volumeOutputLabel;
         private System.Windows.Forms.Label intialPriceLabel;
         private System.Windows.Forms.Label currentPriceLabel;
-        private System.Windows.Forms.Label intialPriceLabelOutput;
-        private System.Windows.Forms.Label currentPriceLabelOutput;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ComboBox delayComboBox;
         private System.Windows.Forms.Label suggestionLabelOutput;
@@ -564,7 +549,6 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label currentBidLabelOutput;
         private System.Windows.Forms.Label currentBidLabel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox valueStoredTextBox2;
@@ -572,11 +556,15 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox sellAlertcheckBox;
         private System.Windows.Forms.CheckBox buyAlertCheckBox;
-        private System.Windows.Forms.Label currentAskLabelOutput;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox volumeTextBox;
+        private System.Windows.Forms.TextBox intialPriceTextBox;
+        private System.Windows.Forms.TextBox currentPriceTextBox;
+        private System.Windows.Forms.TextBox currentBidTextBox;
+        private System.Windows.Forms.TextBox currentAskTextBox;
     }
 }
 
